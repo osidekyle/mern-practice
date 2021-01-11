@@ -1,13 +1,9 @@
 const express=require("express")
 const router=express.Router()
 
-//Login/Landing page
-//GET /
-router.get("/",(req,res)=>{
-    res.render("login",{
-        layout:"login"
-    })
-})
+//Auth with google
+//GET /auth/google
+router.get("/google",passport.authenticate('google',{scope}))
 
 
 //Dashboard
