@@ -15,7 +15,7 @@
             {{#each stories}}
                 <tr>
                     <td><a href="/stories/{{_id}}"></a>{{title}}</td>
-                    <td>{{createdAt}}</td>
+                    <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
                     <td><span class="dash-status">{{status}}</span></td>
                     <td></td>
                 </tr>
@@ -25,7 +25,7 @@
     </table>
 
 {{else}}
-    <p>You have not creted any stories</p>
+    <p>You have not created any stories</p>
 
 
 {{/if}}
